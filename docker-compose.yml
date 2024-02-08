@@ -1,0 +1,18 @@
+version: '3.8'
+
+services:
+  node:
+    build:
+      context: ./
+      target: dev
+    command: npm run dev
+    ports:
+      - '4000:4000'
+    volumes:
+      - ./src/:/app/src/
+      - node_modules:/app/node_modules
+    environment:
+      - name=value
+
+volumes:
+  node_modules:

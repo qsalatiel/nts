@@ -1,0 +1,19 @@
+meta {
+  name: Health Check
+  type: http
+  seq: 1
+}
+
+get {
+  url: {{HOST}}/health
+  body: none
+  auth: none
+}
+
+tests {
+  test("should be healthy", function() {
+    const data = res.getBody();
+    expect(res.getStatus()).to.equal(200);
+    expect(res.getBody()).to.equal('healthy')
+  });
+}
