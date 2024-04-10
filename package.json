@@ -9,8 +9,8 @@
     "tsc:watch": "npx tsc --watch --outDir build",
     "tsc": "npx tsc --outDir build",
     "start:dev": "npm run tsc && node build/index.js",
-    "dev": "npm install && npx nodemon -e ts --exec \"npm run start:dev\"",
-    "up:dev": "docker compose up"
+    "run:dev": "npm install && npx nodemon -e ts --exec \"npm run start:dev\"",
+    "dev": "docker compose up"
   },
   "keywords": [],
   "author": "",
@@ -34,6 +34,7 @@
   },
   "dependencies": {
     "body-parser": "^1.20.2",
+    "dotenv": "^16.4.5",
     "errorhandler": "^1.5.1",
     "express": "^4.18.2",
     "morgan": "^1.10.0",

@@ -5,7 +5,7 @@ services:
     build:
       context: ./
       target: dev
-    command: npm run dev
+    command: npm run run:dev
     ports:
       - '4000:4000'
     volumes:

@@ -1,5 +1,6 @@
 import express from 'express'
 import errorhandler from 'errorhandler'
+import 'dotenv/config'
 
 import { Notification } from './handlers'
 import { loggerMiddleware } from './utils/logger'
